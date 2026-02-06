@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resume Editor</title>
+</head>
+
+<body>
+
+<h2>Build Your Resume</h2>
+
+<form id="resumeForm">
+    <input type="text" id="name" placeholder="Full Name" required><br><br>
+    <input type="text" id="skills" placeholder="Skills (comma separated)"><br><br>
+    <input type="text" id="experience" placeholder="Experience"><br><br>
+
+    <button type="submit">Generate Resume</button>
+</form>
+
+<h3 id="result"></h3>
+
+<script>
+document.getElementById("resumeForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const data = {
+        name: document.getElementById("name").value,
+        skills: document.getElementById("skills").value,
+        experience: document.getElementById("experience").value
+    };
+
+    const response = await fetch("http://localhost:3000/generate-resume", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    document.getElementById("result").innerHTML =
+        "ATS Score: <b>" + result.atsScore + "%</b>";
+});
+</script>
+
+</body>
+</html>
