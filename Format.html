@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Resume</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        padding: 30px;
+    }
+
+    .container {
+        max-width: 800px;
+        background: #fff;
+        padding: 30px;
+        margin: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+        color: #333;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .row {
+        display: flex;
+        gap: 15px;
+    }
+
+    .row div {
+        flex: 1;
+    }
+
+    button {
+        margin-top: 25px;
+        padding: 15px;
+        width: 100%;
+        background: #007bff;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }
+
+    small {
+        color: #666;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Create Your Resume</h1>
+
+<!-- PERSONAL DETAILS -->
+<h2>Personal Information</h2>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name" required>
+
+<div class="row">
+    <div>
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+    </div>
+
+    <div>
+        <label>Professional Email</label>
+        <input type="email" placeholder="name@email.com" required>
+    </div>
+</div>
+
+<label>LinkedIn Profile (Optional)</label>
+<input type="url" placeholder="https://linkedin.com/in/username">
+
+<!-- SUMMARY -->
+<h2>Professional Summary</h2>
+<label>2–3 Sentence Overview</label>
+<textarea rows="4" placeholder="Briefly describe your experience, skills, and career goals"></textarea>
+
+<!-- EXPERIENCE -->
+<h2>Work Experience (Reverse Chronological)</h2>
+
+<label>Job Title</label>
+<input type="text" placeholder="Software Engineer">
+
+<label>Company Name</label>
+<input type="text" placeholder="Company Name">
+
+<label>Location</label>
+<input type="text" placeholder="City, Country">
+
+<div class="row">
+    <div>
+        <label>Start Date</label>
+        <input type="month">
+    </div>
+
+    <div>
+        <label>End Date</label>
+        <input type="month">
+    </div>
+</div>
+
+<label>Key Accomplishments & Metrics</label>
+<textarea rows="4" placeholder="Example: Increased sales by 20%, reduced costs by 15%, led a team of 5"></textarea>
+
+<!-- SKILLS -->
+<h2>Skills</h2>
+
+<label>Hard Skills</label>
+<textarea rows="3" placeholder="Programming, Tools, Technologies"></textarea>
+
+<label>Soft Skills</label>
+<textarea rows="3" placeholder="Communication, Leadership, Teamwork"></textarea>
+
+<!-- EDUCATION -->
+<h2>Education</h2>
+
+<label>Degree</label>
+<input type="text" placeholder="Bachelor of Technology">
+
+<label>Institution Name</label>
+<input type="text" placeholder="University / College Name">
+
+<label>Graduation Year</label>
+<input type="number" placeholder="2024">
+
+<!-- OPTIONAL SECTIONS -->
+<h2>Additional Information (Optional)</h2>
+
+<label>Certifications / Licenses</label>
+<textarea rows="2"></textarea>
+
+<label>Awards / Achievements</label>
+<textarea rows="2"></textarea>
+
+<label>Projects</label>
+<textarea rows="2"></textarea>
+
+<label>Volunteer Work / Hobbies</label>
+<textarea rows="2"></textarea>
+
+<button type="submit">Save & Generate Resume</button>
+
+</div>
+
+</body>
+</html>
